@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <UITextFieldDelegate>
+@interface ViewController ()
 
 @property (strong, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (assign) float billAmount;
@@ -24,8 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.billAmountTextField.delegate = self;
-    // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTipAmountField) name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,19 +46,9 @@
     [self updateTipAmountField];
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    
-    [self updateTipAmountField];
-    
-    return YES;
-}
-
 -(void)updateTipAmountField {
     self.billAmount = [self.billAmountTextField.text floatValue];
-    
-    
     self.tipAmount = self.tipPercentage.value * self.billAmount;
-    
     self.tipAmountLabel.text = [NSString stringWithFormat:@"%.2f", self.tipAmount];
 }
 

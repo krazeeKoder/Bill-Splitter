@@ -74,13 +74,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awb-Jy-WqP">
-                                <rect key="frame" x="279" y="393" width="43" height="21"/>
+                                <rect key="frame" x="234" y="393" width="133" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="43" id="3DB-Va-nlU"/>
+                                    <constraint firstAttribute="width" constant="133" id="eSN-0v-qoO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="133" id="g4d-fV-EgR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3DB-Va-nlU"/>
+                                        <exclude reference="g4d-fV-EgR"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whf-tu-fSp">
                                 <rect key="frame" x="251" y="285" width="97" height="30"/>
