@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (assign) float billAmount;
@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.billAmountTextField.delegate = self;
         // Do any additional setup after loading the view, typically from a nib.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTipAmountField) name:UITextFieldTextDidChangeNotification object:nil];
@@ -52,4 +53,11 @@
     self.tipAmountLabel.text = [NSString stringWithFormat:@"%.2f", self.tipAmount];
 }
 
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
 @end
