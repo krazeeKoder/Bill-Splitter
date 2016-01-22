@@ -9,6 +9,13 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *billAmountTextField;
+@property (assign) float billAmount;
+@property (assign) float tipAmount;
+@property (strong, nonatomic) IBOutlet UISlider *tipPercentage;
+@property (strong, nonatomic) IBOutlet UILabel *tipAmountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *tipPercentLabel;
+
 
 @end
 
@@ -22,6 +29,23 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)billAmountTextFieldUsed:(id)sender {
+    
+    if (UIControlEventEditingChanged) {
+        self.billAmount = [self.billAmountTextField.text floatValue];
+    
+    
+    self.tipAmount = self.tipPercentage.value * self.billAmount;
+    
+        self.tipAmountLabel.text = [NSString stringWithFormat:@"%.2f", self.tipAmount];
+    }
+    
+}
+- (IBAction)sliderAction:(id)sender {
+    float valueAsPercentage = self.tipPercentage.value * 100;
+    
+    self.tipPercentLabel.text = [NSString stringWithFormat:@"%.0f%%",valueAsPercentage];
 }
 
 @end
