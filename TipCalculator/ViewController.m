@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
+
 @property (strong, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (assign) float billAmount;
 @property (assign) float tipAmount;
@@ -23,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.billAmountTextField.delegate = self;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -32,20 +34,31 @@
 }
 - (IBAction)billAmountTextFieldUsed:(id)sender {
     
-    if (UIControlEventEditingChanged) {
-        self.billAmount = [self.billAmountTextField.text floatValue];
-    
-    
-    self.tipAmount = self.tipPercentage.value * self.billAmount;
-    
-        self.tipAmountLabel.text = [NSString stringWithFormat:@"%.2f", self.tipAmount];
-    }
+
     
 }
 - (IBAction)sliderAction:(id)sender {
     float valueAsPercentage = self.tipPercentage.value * 100;
     
     self.tipPercentLabel.text = [NSString stringWithFormat:@"%.0f%%",valueAsPercentage];
+    
+    [self updateTipAmountField];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    [self updateTipAmountField];
+    
+    return YES;
+}
+
+-(void)updateTipAmountField {
+    self.billAmount = [self.billAmountTextField.text floatValue];
+    
+    
+    self.tipAmount = self.tipPercentage.value * self.billAmount;
+    
+    self.tipAmountLabel.text = [NSString stringWithFormat:@"%.2f", self.tipAmount];
 }
 
 @end

@@ -88,10 +88,7 @@
                                     <constraint firstAttribute="width" constant="97" id="1YY-69-mEN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="billAmountTextFieldUsed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Ggm-A1-Bi4"/>
-                                </connections>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -125,7 +122,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="billAmountTextField" destination="whf-tu-fSp" id="a2k-Qv-gw7"/>
+                        <outlet property="billAmountTextField" destination="whf-tu-fSp" id="RPb-o6-11O"/>
                         <outlet property="tipAmountLabel" destination="Awb-Jy-WqP" id="xpe-Wo-QCN"/>
                         <outlet property="tipPercentLabel" destination="d9K-AT-AgT" id="UHl-Lh-Jx8"/>
                         <outlet property="tipPercentage" destination="cSC-hM-tvt" id="zCl-BS-3Gw"/>
