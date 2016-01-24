@@ -12,10 +12,11 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (assign) float billAmount;
-@property (assign) float tipAmount;
-@property (strong, nonatomic) IBOutlet UISlider *tipPercentage;
-@property (strong, nonatomic) IBOutlet UILabel *tipAmountLabel;
-@property (strong, nonatomic) IBOutlet UILabel *tipPercentLabel;
+@property (assign) float splitAmount;
+
+@property (strong, nonatomic) IBOutlet UISlider *numberOfSplitters;
+@property (strong, nonatomic) IBOutlet UILabel *splitAmountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numberOfSplittersLabel;
 
 
 @end
@@ -27,30 +28,27 @@
     self.billAmountTextField.delegate = self;
         // Do any additional setup after loading the view, typically from a nib.
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTipAmountField) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSplitAmountField) name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)billAmountTextFieldUsed:(id)sender {
+- (IBAction)numberOfSplittersSlider:(id)sender {
     
-
+    self.numberOfSplittersLabel.text = [NSString stringWithFormat:@"%.0f",self.numberOfSplitters.value];
     
-}
-- (IBAction)sliderAction:(id)sender {
-    float valueAsPercentage = self.tipPercentage.value * 100;
-    
-    self.tipPercentLabel.text = [NSString stringWithFormat:@"%.0f%%",valueAsPercentage];
-    
-    [self updateTipAmountField];
+    [self updateSplitAmountField];
 }
 
--(void)updateTipAmountField {
+- (IBAction)numberOfSplitters:(id)sender {
+}
+
+-(void)updateSplitAmountField {
     self.billAmount = [self.billAmountTextField.text floatValue];
-    self.tipAmount = self.tipPercentage.value * self.billAmount;
-    self.tipAmountLabel.text = [NSString stringWithFormat:@"%.2f", self.tipAmount];
+    self.splitAmount = self.billAmount / lroundf(self.numberOfSplitters.value);
+    self.splitAmountLabel.text = [NSString stringWithFormat:@"$%.2f", self.splitAmount];
 }
 
 

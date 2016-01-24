@@ -17,26 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.14999999999999999" minValue="0.0" maxValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cSC-hM-tvt">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="cSC-hM-tvt">
                                 <rect key="frame" x="241" y="180" width="118" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="ZZX-cp-KSH"/>
                                     <constraint firstAttribute="height" constant="30" id="uNz-4T-fy4"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="PfF-7v-1Hs"/>
+                                    <action selector="numberOfSplitters:" destination="BYZ-38-t0r" eventType="valueChanged" id="o7E-An-0WV"/>
+                                    <action selector="numberOfSplittersSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="rxI-EK-YhY"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o82-Go-J0f">
-                                <rect key="frame" x="279" y="151" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of people splitting the Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o82-Go-J0f">
+                                <rect key="frame" x="150" y="151" width="300" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="Geq-qf-0mH"/>
+                                    <constraint firstAttribute="width" constant="300" id="Geq-qf-0mH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caq-DA-ZbO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caq-DA-ZbO">
                                 <rect key="frame" x="206" y="184" width="29" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="29" id="mGo-C3-U5c"/>
@@ -45,7 +46,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZs-yP-iXz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZs-yP-iXz">
                                 <rect key="frame" x="365" y="184" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="gPg-Kl-0Ph"/>
@@ -54,7 +55,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9K-AT-AgT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9K-AT-AgT">
                                 <rect key="frame" x="279" y="218" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9gM-M7-sLi"/>
@@ -64,10 +65,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nET-qp-cXV">
-                                <rect key="frame" x="252" y="351" width="96" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount/Person:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nET-qp-cXV">
+                                <rect key="frame" x="225" y="351" width="150" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="xID-KV-o7x"/>
+                                    <constraint firstAttribute="width" constant="150" id="xID-KV-o7x"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -98,11 +99,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYU-y9-Dbq">
+                                <rect key="frame" x="206" y="289" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="JrM-m3-aft"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nET-qp-cXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2lV-7R-CQB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Awb-Jy-WqP" secondAttribute="bottom" constant="186" id="2nS-cz-gTY"/>
+                            <constraint firstItem="RYU-y9-Dbq" firstAttribute="top" secondItem="Caq-DA-ZbO" secondAttribute="bottom" constant="84" id="6Ik-W3-Dgb"/>
                             <constraint firstItem="nET-qp-cXV" firstAttribute="top" secondItem="whf-tu-fSp" secondAttribute="bottom" constant="36" id="ArU-7c-AgH"/>
                             <constraint firstItem="o82-Go-J0f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BGS-8P-wqp"/>
                             <constraint firstItem="cSC-hM-tvt" firstAttribute="leading" secondItem="Caq-DA-ZbO" secondAttribute="trailing" constant="8" id="BpK-vd-ifv"/>
@@ -115,6 +126,7 @@
                             <constraint firstItem="Awb-Jy-WqP" firstAttribute="top" secondItem="nET-qp-cXV" secondAttribute="bottom" constant="21" id="fr5-P5-stX"/>
                             <constraint firstItem="Awb-Jy-WqP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jIH-Fs-COK"/>
                             <constraint firstItem="cSC-hM-tvt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="k3l-fI-Dc1"/>
+                            <constraint firstItem="whf-tu-fSp" firstAttribute="leading" secondItem="RYU-y9-Dbq" secondAttribute="trailing" constant="3" id="kQu-k5-zD5"/>
                             <constraint firstItem="Awb-Jy-WqP" firstAttribute="top" secondItem="nET-qp-cXV" secondAttribute="bottom" constant="21" id="n3Y-2p-jLa"/>
                             <constraint firstItem="d9K-AT-AgT" firstAttribute="top" secondItem="cSC-hM-tvt" secondAttribute="bottom" constant="8" id="ndC-1B-58A"/>
                             <constraint firstItem="nET-qp-cXV" firstAttribute="top" secondItem="whf-tu-fSp" secondAttribute="bottom" constant="36" id="q30-mr-oyG"/>
@@ -131,9 +143,9 @@
                     </view>
                     <connections>
                         <outlet property="billAmountTextField" destination="whf-tu-fSp" id="RPb-o6-11O"/>
-                        <outlet property="tipAmountLabel" destination="Awb-Jy-WqP" id="xpe-Wo-QCN"/>
-                        <outlet property="tipPercentLabel" destination="d9K-AT-AgT" id="UHl-Lh-Jx8"/>
-                        <outlet property="tipPercentage" destination="cSC-hM-tvt" id="zCl-BS-3Gw"/>
+                        <outlet property="numberOfSplitters" destination="cSC-hM-tvt" id="dEu-g1-t8i"/>
+                        <outlet property="numberOfSplittersLabel" destination="d9K-AT-AgT" id="hyo-lf-eyZ"/>
+                        <outlet property="splitAmountLabel" destination="Awb-Jy-WqP" id="1LZ-rc-fBq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

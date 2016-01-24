@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BB64A101C52927100505B78"
-               BuildableName = "TipCalculator.app"
-               BlueprintName = "TipCalculator"
-               ReferencedContainer = "container:TipCalculator.xcodeproj">
+               BuildableName = "BillSplitter.app"
+               BlueprintName = "BillSplitter"
+               ReferencedContainer = "container:BillSplitter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BB64A291C52927100505B78"
-               BuildableName = "TipCalculatorTests.xctest"
-               BlueprintName = "TipCalculatorTests"
-               ReferencedContainer = "container:TipCalculator.xcodeproj">
+               BuildableName = "BillSplitter.xctest"
+               BlueprintName = "BillSplitterTests"
+               ReferencedContainer = "container:BillSplitter.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BB64A341C52927100505B78"
-               BuildableName = "TipCalculatorUITests.xctest"
-               BlueprintName = "TipCalculatorUITests"
-               ReferencedContainer = "container:TipCalculator.xcodeproj">
+               BuildableName = "BillSplitter.xctest"
+               BlueprintName = "BillSplitterUITests"
+               ReferencedContainer = "container:BillSplitter.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BB64A101C52927100505B78"
-            BuildableName = "TipCalculator.app"
-            BlueprintName = "TipCalculator"
-            ReferencedContainer = "container:TipCalculator.xcodeproj">
+            BuildableName = "BillSplitter.app"
+            BlueprintName = "BillSplitter"
+            ReferencedContainer = "container:BillSplitter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BB64A101C52927100505B78"
-            BuildableName = "TipCalculator.app"
-            BlueprintName = "TipCalculator"
-            ReferencedContainer = "container:TipCalculator.xcodeproj">
+            BuildableName = "BillSplitter.app"
+            BlueprintName = "BillSplitter"
+            ReferencedContainer = "container:BillSplitter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BB64A101C52927100505B78"
-            BuildableName = "TipCalculator.app"
-            BlueprintName = "TipCalculator"
-            ReferencedContainer = "container:TipCalculator.xcodeproj">
+            BuildableName = "BillSplitter.app"
+            BlueprintName = "BillSplitter"
+            ReferencedContainer = "container:BillSplitter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
